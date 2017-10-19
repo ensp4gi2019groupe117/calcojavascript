@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TP_2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    <body>
+        
+        <form name="calculatrice">
+            <div id="calculator">
+                <input type="text" id="calc" name="calc" value="" autocomplete="off"/>
+
+                <div id="keypad">
+                    <input type="button" value="7" class="num btn" onclick="saisie(7);">
+                    <input type="button" value="8" class="num btn" onclick="saisie(8);">
+                    <input type="button" value="9" class="num btn" onclick="saisie(9);">
+                    <input type="button" value="÷" class="com btn" onclick="operation('/');">
+                    <input type="button" value="4" class="num btn" onclick="saisie(4);">
+                    <input type="button" value="5" class="num btn" onclick="saisie(5);">
+                    <input type="button" value="6" class="num btn" onclick="saisie(6);">
+                    <input type="button" value="x" class="com btn" onclick="operation('*');">
+                    <input type="button" value="3" class="num btn" onclick="saisie(3);">
+                    <input type="button" value="2" class="num btn" onclick="saisie(2);">
+                    <input type="button" value="1" class="num btn" onclick="saisie(1);">
+                    <input type="button" value="-" class="com btn" onclick="operation('-');">
+                    <input type="button" value="0" class="num btn" onclick="saisie(0);">
+                    <input type="button" value="." class="com btn" onclick="saisie('.');">
+                    <input type="button" value="=" class="com btn" onclick="egal();">
+                    <input type="button" value="+" class="com btn" onclick="operation('+');">
+                </div>
+            </div>
+        </form>
+
+        <script type="text/javascript" src="calco.js"></script>
+        
+    </body>
+</html>

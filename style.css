@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 oct. 2017, 20:57:35
+    Author     : Alain
+*/
+body
+{
+    font-family: 'Century Gothic', Calibri,serif;
+}
+
+#calculator
+{
+    width: 320px;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    background-color: #5a5c68;
+    padding: 10px;
+    min-width: 320px;
+    border: 2px solid black;
+}
+
+input[type="text"]
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 5px;
+    border-radius: 20px;
+    height: 70px;
+    width: 285px;
+    background-color: #c1d797;
+    border: none;
+    text-align: right;
+    font-size: 30px;
+    border: 2px solid black;
+    outline: none;
+}
+
+#keypad
+{
+    margin-top: 5px;
+}
+
+input[type="button"]
+{
+   display: inline-block;
+   margin-top: 5px;
+   margin-left: 5px;
+   border-radius: 15px;
+   width: 70px;
+   height: 70px;
+   color: white;
+   font-size: 60px;
+   font-weight: bold;
+   border: none;
+   outline: none;
+   padding: 0;
+}
+
+
+#keypad .num
+{
+    background-color: #3d4049;
+}
+
+#keypad .com
+{
+    background-color: #bbbfc7;
+}
+
+#keypad .num:hover, #keypad .com:hover
+{
+    background-color: #91ff6d;
+    color: black;
+}
