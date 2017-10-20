@@ -11,12 +11,20 @@ var screen = document.getElementById("calc");
 var previouskey = "";
 
 var saisie = function(key){
+	if (previouskey=="="){
+		screen.value = "";
+		op1="";
+		op="";
+		op2="";
+	}
+
 	if (screen.value == "" && key=="."){
 		screen.value = "0.";
 	}
 	else{
 		screen.value = screen.value + key;
 	}
+	
 	if (op==""){
 		op1 = screen.value;
 	}
@@ -65,6 +73,7 @@ var operation = function(key){
 var egal = function(){
 	screen.value = "";
 	if (op1!="" && op!="" && op2!="") calcul();
+	previouskey = "=";
 };
 
 /*var setLog = function(){
