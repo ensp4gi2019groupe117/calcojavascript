@@ -8,8 +8,15 @@ var result = 0;
 var screen = document.getElementById("calc");
 //var log = document.getElementById("log");
 
+var previouskey = "";
+
 var saisie = function(key){
-	screen.value = screen.value + key;
+	if (screen.value == "" && key=="."){
+		screen.value = "0.";
+	}
+	else{
+		screen.value = screen.value + key;
+	}
 	if (op==""){
 		op1 = screen.value;
 	}
@@ -17,6 +24,7 @@ var saisie = function(key){
 		op2 = screen.value;
 	}
 	//setLog();
+	previouskey = key;
 };
 
 var operation = function(key){
@@ -32,8 +40,13 @@ var operation = function(key){
 			}
 		}
 		else{
-			op = key;
-			screen.value = "";
+			if (previouskey=="."){
+				alert("Erreur!!! Completez le nombre reel");
+			}
+			else{
+				op = key;
+				screen.value = "";
+			}
 		}
 	}
 	else{
@@ -46,6 +59,7 @@ var operation = function(key){
 		}
 	}
 	//setLog();
+	previouskey = key;
 };
 
 var egal = function(){
@@ -62,6 +76,10 @@ var calcul = function(){
 	screen.value = eval(op1 + "" + op + "" + op2);
 	op1 = ""+screen.value;
 	op = "";
-	op2 = "";
+	op2= "";
+};
+
+var keyboard = function(event){
+
 };
 
