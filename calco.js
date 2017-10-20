@@ -10,6 +10,16 @@ var screen = document.getElementById("calc");
 
 var previouskey = "";
 
+document.addEventListener('keydown', function(event){
+	var code = event.keyCode;
+	if (code == 8){
+		screen.value = "";
+		op1 = "";
+		op = "";
+		op2 = "";
+	}
+}, false);
+
 var saisie = function(key){
 	if (previouskey=="="){
 		screen.value = "";
@@ -24,7 +34,7 @@ var saisie = function(key){
 	else{
 		screen.value = screen.value + key;
 	}
-	
+
 	if (op==""){
 		op1 = screen.value;
 	}
@@ -89,6 +99,12 @@ var calcul = function(){
 };
 
 var keyboard = function(event){
-
+	var code = event.keyCode();
+	if (code == 8){
+		screen.value = "";
+		op1 = "";
+		op = "";
+		op2 = "";
+	}
 };
 
